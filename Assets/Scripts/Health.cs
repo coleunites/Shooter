@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 
 	int health;
 
-	void start()
+	void Start()
 	{
 		health = maxHealth;
 	}

@@ -18,7 +18,7 @@ public class Pistol : Weapon
 
 			if(health)
 			{
-				hitInfo.rigidbody.AddExplosionForce(10f, hitInfo.point, 1f);
+				hitInfo.rigidbody.AddExplosionForce(100f, hitInfo.point, 1f);
 				health.TakeDamage(damage);//
 			}
 

@@ -16,7 +16,7 @@ public class WeaponController : MonoBehaviour
 	{
 		if (currentWeapon)
 		{
-			if (Input.GetMouseButton (0)) 
+			if (Input.GetMouseButtonDown (0)) 
 			{
 				currentWeapon.Fire ();
 			}
