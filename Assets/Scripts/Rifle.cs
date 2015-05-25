@@ -20,13 +20,11 @@ public class Rifle : Weapon
 		if (Physics.Raycast (ray, out hitInfo, range))
 		{
 			//it hit
-			Health health = hitInfo.collider.GetComponent<Health>();
-
+			Health health = hitInfo.collider.GetComponentInParent<Health>();
 
 			if(health)
 			{
 				VFXManger.Instance.Spawn ("bloodSplatter", hitInfo.point, Quaternion.identity);
-				hitInfo.rigidbody.AddForceAtPosition(-hitForce * hitInfo.normal, hitInfo.point);
 				health.TakeDamage(damage);//
 			}
 			//for dust use Quaternion rotation = Quaternion.FromToRotation(vector3.forward, hitInfo.normal);
